@@ -10,34 +10,41 @@
 
   docker logs 76dca501ff7f
 
-Logs:  
+Logs: 
 
-felicia@felicia:~/Desktop/dev/cna/techtrends$ docker logs 76dca501ff7f
- * Serving Flask app "app" (lazy loading)
+felicia@felicia:~/Desktop/dev/cna/techtrends/techtrends$ python3 app.py
+ * Serving Flask app 'app' (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: off
-INFO:werkzeug: * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:34:36] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:39:56] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:39:56] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:39:56] "GET /favicon.ico HTTP/1.1" 404 -
-INFO:app:2021-09-19 19:40:12.134911 , Article "2020 CNCF Annual Report" is retrieved!
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:40:12] "GET /1 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:40:20] "GET / HTTP/1.1" 200 -
-INFO:app:2021-09-19 19:40:27.534747 , Article "KubeCon + CloudNativeCon 2021" is retrieved!
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:40:27] "GET /2 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:40:29] "GET / HTTP/1.1" 200 -
-INFO:app:2021-09-19 19:40:32.602054 , Article "Kubernetes v1.20 Release Notes" is retrieved!
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:40:32] "GET /3 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:40:34] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:40:40] "GET /create HTTP/1.1" 200 -
-INFO:app:2021-09-19 19:41:33.422002 Techtrends Project
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:41:33] "POST /create HTTP/1.1" 302 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:41:33] "GET / HTTP/1.1" 200 -
-INFO:app:2021-09-19 19:41:42.367879 , Article "Techtrends Project" is retrieved!
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:41:42] "GET /7 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:41:44] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:42:15] "GET /metrics HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [19/Sep/2021 19:43:50] "GET / HTTP/1.1" 200 -
+WARNING:werkzeug:2021-09-30 18:26:12,360:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug:2021-09-30 18:26:12,360:  * Running on http://192.168.43.17:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:2021-09-30 18:26:43,416: 192.168.43.17 - - [30/Sep/2021 18:26:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2021-09-30 18:26:43,473: 192.168.43.17 - - [30/Sep/2021 18:26:43] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:2021-09-30 18:26:50,673: 2021-09-30 18:26:50.673942 About Us page is retrieved!
+INFO:werkzeug:2021-09-30 18:26:50,676: 192.168.43.17 - - [30/Sep/2021 18:26:50] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:2021-09-30 18:26:50,702: 192.168.43.17 - - [30/Sep/2021 18:26:50] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2021-09-30 18:26:53,629: 192.168.43.17 - - [30/Sep/2021 18:26:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2021-09-30 18:26:53,657: 192.168.43.17 - - [30/Sep/2021 18:26:53] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2021-09-30 18:26:55,880: 192.168.43.17 - - [30/Sep/2021 18:26:55] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:2021-09-30 18:26:55,911: 192.168.43.17 - - [30/Sep/2021 18:26:55] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2021-09-30 18:27:26,656: 2021-09-30 18:27:26.656582 Software engineer 
+INFO:werkzeug:2021-09-30 18:27:26,657: 192.168.43.17 - - [30/Sep/2021 18:27:26] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:2021-09-30 18:27:26,663: 192.168.43.17 - - [30/Sep/2021 18:27:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2021-09-30 18:27:26,689: 192.168.43.17 - - [30/Sep/2021 18:27:26] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2021-09-30 18:27:38,255: 2021-09-30 18:27:38.255246 , Article "KubeCon + CloudNativeCon 2021" is retrieved!
+INFO:werkzeug:2021-09-30 18:27:38,258: 192.168.43.17 - - [30/Sep/2021 18:27:38] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:2021-09-30 18:27:38,281: 192.168.43.17 - - [30/Sep/2021 18:27:38] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2021-09-30 18:27:54,315: Status request successful
+INFO:werkzeug:2021-09-30 18:27:54,315: 192.168.43.17 - - [30/Sep/2021 18:27:54] "GET /healthz HTTP/1.1" 200 -
+INFO:app:2021-09-30 18:28:01,610: Status request successful
+INFO:werkzeug:2021-09-30 18:28:01,611: 192.168.43.17 - - [30/Sep/2021 18:28:01] "GET /healthz HTTP/1.1" 200 -
+INFO:app:2021-09-30 18:28:12,267: Metrics request successful
+INFO:werkzeug:2021-09-30 18:28:12,267: 192.168.43.17 - - [30/Sep/2021 18:28:12] "GET /metrics HTTP/1.1" 200 -
+INFO:app:2021-09-30 18:28:20,487: Metrics request successful
+INFO:werkzeug:2021-09-30 18:28:20,488: 192.168.43.17 - - [30/Sep/2021 18:28:20] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:2021-09-30 18:28:27,372: 192.168.43.17 - - [30/Sep/2021 18:28:27] "GET /test HTTP/1.1" 404 -
+
+

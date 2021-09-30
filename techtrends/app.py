@@ -6,6 +6,14 @@ import sys
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
+stdout_handler = logging.StreamHandler(sys.stdout)
+stdout_handler.setLevel(logging.DEBUG)
+stderr_handler = logging.StreamHandler(sys.stderr)
+stderr_handler.setLevel(logging.ERROR)
+dual_handlers = [stdout_handler, stderr_handler]
+logging.basicConfig(level=logging.DEBUG, format='%(levelname)s:%(name)s:%(asctime)s: %(message)s', handlers=dual_handlers)
+
+
 #To get number of connections
 connection_count = 0
 
@@ -87,6 +95,7 @@ def status():
         status=200,
         mimetype='application/json'
     )
+    app.logger.info('Status request successful')
 
     return response
 
@@ -98,10 +107,11 @@ def metrics():
     connection.close()
     response = app.response_class(
         response=json.dumps(
-            {'db_connection_count': connection_count, 'post_count': len(posts)}),
+            {'status':'success', 'code':0, 'data':{'db_connection_count': connection_count, 'post_count': len(posts)}}),
         status=200,
         mimetype='application/json'
     )
+    app.logger.info('Metrics request successful')
     return response
 
 
